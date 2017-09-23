@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private String itemSelected;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         Button buttonAdd = (Button) findViewById(R.id.buttonSubmit);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.spinner);
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -31,8 +33,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                itemSelected = (String) spinner.getSelectedItem();
+                int spinnerPos = spinner.getSelectedItemPosition();
+                EditText  textBox = (EditText) findViewById(R.id.convert);
+                String input = textBox.getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, ConvertActivity.class);
                 intent.putExtra("ItemSelected", itemSelected);
+                intent.putExtra("Position", spinnerPos);
+                intent.putExtra("Input", input);
                 startActivity(intent);
             }
         });

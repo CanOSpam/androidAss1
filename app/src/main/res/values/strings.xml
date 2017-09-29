@@ -2,10 +2,11 @@
     <string name="app_name">androidSchoolProject1</string>
     <string name="title_activity_convert">ConvertActivity</string>
     <string name="submit_button">submit</string>
+    <string name="back_button">Back</string>
     <string name="edit_message">Enter a number to convert</string>
 
     <string-array name="conversions_array">
-        <item>Hectares to Acre</item>
+        <item>Hectares to Acres</item>
         <item>Acres to Hectares</item>
         <item>Hectares to Square Feet</item>
         <item>Square Feet to Hectares</item>

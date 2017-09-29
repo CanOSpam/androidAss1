@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">androidSchoolProject1</string>
+    <string name="title_activity_convert">ConvertActivity</string>
+    <string name="submit_button">Soumettre</string>
+    <string name="back_button">Arrière</string>
+    <string name="edit_message">Entrez la valeur</string>
+
+    <string-array name="conversions_array">
+        <item>Hectares à Acres</item>
+        <item>Acres aux Hectares</item>
+        <item>Hectares aux pieds carrés</item>
+        <item>Pieds carrés à Hectares</item>
+        <item>Mètres carrés à pieds carrés</item>
+        <item>Pieds carrés aux mètres carrés</item>
+    </string-array>
+</resources>
